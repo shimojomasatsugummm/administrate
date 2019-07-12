@@ -8,6 +8,8 @@ as defined by the routes in the `admin/` namespace
 %>
 
 <nav class="navigation" role="navigation">
+  <%= link_to "Back to main application", root_url, class: "navigation__link" %> 
+
   <% Administrate::Namespace.new(namespace).resources.each do |resource| %>
     <%= link_to(
       display_resource_name(resource),
