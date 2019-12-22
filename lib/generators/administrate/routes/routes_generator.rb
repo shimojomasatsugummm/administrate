@@ -1,7 +1,7 @@
 if defined?(Zeitwerk)
   Zeitwerk::Loader.eager_load_all
 else
-  Rails.application.eager_load!
+  Jets.application.eager_load!
 end
 
 require "rails/generators/base"
@@ -9,7 +9,7 @@ require "administrate/namespace"
 
 module Administrate
   module Generators
-    class RoutesGenerator < Rails::Generators::Base
+    class RoutesGenerator < Jets::Generators::Base
       source_root File.expand_path("../templates", __FILE__)
       class_option :namespace, type: :string, default: "admin"
 
@@ -81,7 +81,7 @@ module Administrate
       end
 
       def rails_routes_file_path
-        Rails.root.join("config/routes.rb")
+        Jets.root.join("config/routes.rb")
       end
 
       def routes_file_path

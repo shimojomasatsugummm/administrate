@@ -23,7 +23,7 @@ module Administrate
     attr_reader :namespace
 
     def all_routes
-      Rails.application.routes.routes.map do |route|
+      Jets.application.routes.routes.map do |route|
         route.defaults.values_at(:controller, :action).map(&:to_s)
       end
     end

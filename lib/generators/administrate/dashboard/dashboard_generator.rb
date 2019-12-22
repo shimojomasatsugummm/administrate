@@ -2,7 +2,7 @@ require "rails/generators/named_base"
 
 module Administrate
   module Generators
-    class DashboardGenerator < Rails::Generators::NamedBase
+    class DashboardGenerator < Jets::Generators::NamedBase
       ATTRIBUTE_TYPE_MAPPING = {
         boolean: "Field::Boolean",
         date: "Field::DateTime",
@@ -31,12 +31,12 @@ module Administrate
       def create_dashboard_definition
         template(
           "dashboard.rb.erb",
-          Rails.root.join("app/dashboards/#{file_name}_dashboard.rb"),
+          Jets.root.join("app/dashboards/#{file_name}_dashboard.rb"),
         )
       end
 
       def create_resource_controller
-        destination = Rails.root.join(
+        destination = Jets.root.join(
           "app/controllers/#{namespace}/#{file_name.pluralize}_controller.rb",
         )
 
