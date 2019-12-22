@@ -4,7 +4,7 @@ require "administrate/namespace"
 
 module Administrate
   module Generators
-    class InstallGenerator < Rails::Generators::Base
+    class InstallGenerator < Jets::Generators::Base
       include Administrate::GeneratorHelpers
       source_root File.expand_path("../templates", __FILE__)
 
@@ -13,7 +13,7 @@ module Administrate
       def run_routes_generator
         if dashboard_resources.none?
           call_generator("administrate:routes", "--namespace", namespace)
-          load Rails.root.join("config/routes.rb")
+          load Jets.root.join("config/routes.rb")
         end
       end
 

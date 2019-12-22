@@ -1,6 +1,6 @@
 module Administrate
   module Generators
-    class FieldGenerator < Rails::Generators::NamedBase
+    class FieldGenerator < Jets::Generators::NamedBase
       source_root File.expand_path("../templates", __FILE__)
 
       def template_field_object

@@ -3,7 +3,7 @@ require "rails/generators/base"
 module Administrate
   module Generators
     module Assets
-      class JavascriptsGenerator < Rails::Generators::Base
+      class JavascriptsGenerator < Jets::Generators::Base
         JAVASCRIPTS_PATH = "app/assets/javascripts/administrate"
 
         source_root File.expand_path("../../../../../", __FILE__)

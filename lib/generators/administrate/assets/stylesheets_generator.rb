@@ -3,7 +3,7 @@ require "rails/generators/base"
 module Administrate
   module Generators
     module Assets
-      class StylesheetsGenerator < Rails::Generators::Base
+      class StylesheetsGenerator < Jets::Generators::Base
         STYLESHEETS_PATH = "app/assets/stylesheets/administrate"
 
         source_root File.expand_path("../../../../../", __FILE__)

@@ -2,7 +2,7 @@ require "rails/generators/base"
 require "administrate/generator_helpers"
 
 module Administrate
-  class ViewGenerator < Rails::Generators::Base
+  class ViewGenerator < Jets::Generators::Base
     include Administrate::GeneratorHelpers
 
     private

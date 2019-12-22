@@ -16,7 +16,7 @@ require "administrate/namespace"
 require "administrate/namespace/resource"
 
 module Administrate
-  class Engine < ::Rails::Engine
+  class Engine < ::Jets::Engine
     isolate_namespace Administrate
 
     @@javascripts = []
